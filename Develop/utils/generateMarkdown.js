@@ -55,7 +55,7 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) {
   return `
 ## License
-Project privided by License: ${renderLicenseLink(license) === '' ? 'No license' : `[${license}](${renderLicenseLink(license)})`}
+Project provided by license: ${renderLicenseLink(license) === '' ? 'no license' : `[${license}](${renderLicenseLink(license)})`}
   `;
 }
 
