@@ -1,6 +1,6 @@
 // TODO: Include packages needed for this application
 import inquirer from "inquirer";
-import Choice from "inquirer/lib/objects/choice";
+
 // TODO: Create an array of questions for user input
 const questions = [
     {
