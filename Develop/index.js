@@ -15,11 +15,6 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'What is the table of contents?',
-        name: 'content',
-    },
-    {
-        type: 'input',
         message: 'What is the installation instructions?',
         name: 'installation',
     },
@@ -58,6 +53,11 @@ const questions = [
         type: 'input',
         message: 'What is your GitHub username? (For questions regarding your project)',
         name: 'githubUsername',
+    },
+    {
+        type: 'input',
+        message: 'What is your email address? (For questions regarding your project)',
+        name: 'email',
     },
 ];
 

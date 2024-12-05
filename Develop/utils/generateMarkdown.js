@@ -1,6 +1,6 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) { 
+function renderLicenseBadge(license) {
   if (license === 'MIT License') {
     return 'https://img.shields.io/badge/License-MIT-yellow.svg';
   } else if (license === 'Apache License 2.0') {
@@ -55,15 +55,51 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) {
   return `
 ## License
-Project provided by license: ${renderLicenseLink(license) === '' ? 'no license' : `[${license}](${renderLicenseLink(license)})`}
-  `;
+
+Project covered under license: ${renderLicenseLink(license) === '' ? 'no license' : `[${license}](${renderLicenseLink(license)})`}
+`;
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
-  
-  `;
+![${data.license}](${renderLicenseBadge(data.license)})
+
+## Description
+
+${data.description}
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
+
+## Installation
+
+${data.installation}
+
+## Usage
+
+${data.usage}
+
+${renderLicenseSection(data.license)}
+
+## Contribution
+
+${data.contribution}
+
+## Tests
+
+${data.test}
+
+## Questions
+
+Please reach me at ${data.email} and ${data.githubUsername} for any questions.  
+`;
 }
 
 export default generateMarkdown;
